@@ -1,0 +1,16 @@
+{
+  "name": "metascan-api",
+  "version": "1.0.0",
+  "description": "MetaScan API backend",
+  "scripts": {
+    "start": "uvicorn main:app --reload",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fastapi": "^0.104.0",
+    "uvicorn": "^0.24.0",
+    "mysql-connector-python": "^8.0.33",
+    "sqlalchemy": "^2.0.0",
+    "pydantic": "^2.0.0"
+  }
+} 

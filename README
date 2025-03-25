@@ -1,0 +1,34 @@
+## Steps
+## provide endpoint to CRUD prompt 
+    -- string array 
+## provide endpoint to create a job
+
+
+##Running on docker using admin
+docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=admin -p 3306:3306 -d mysql:latest
+
+# first time making the db
+CREATE DATABASE metascandb;
+USE metascandb;
+CREATE TABLE prompts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    text VARCHAR(255),
+    max_tokens INT,
+    temperature FLOAT,
+    top_p FLOAT,
+    stop_sequences JSON,
+    model_id VARCHAR(255),
+    top_k INT
+);
+
+
+# file info database
+CREATE TABLE fileInfo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    sourceBucket VARCHAR(255),
+    targetBucket VARCHAR(255)
+)
+
+# connecting to the database
+
+

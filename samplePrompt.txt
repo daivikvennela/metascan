@@ -1,0 +1,15 @@
+{
+  "prompt": {
+    "text": "Please classify the sentiment of this text: {{text}}",
+    "inferenceConfiguration": {
+      "maxTokens": 100,
+      "stopSequences": ["\n\n", "\n"],
+      "temperature": 0.7,
+      "topP": 0.9
+    }
+  },
+  "modelId": "YourModelID",
+  "additionalModelRequestFields": {
+    "top_k": 200 // For models supporting this parameter
+  }
+}
